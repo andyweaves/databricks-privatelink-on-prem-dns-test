@@ -24,4 +24,4 @@ Follow the setup steps in the Google Doc (please reach out to your Databricks te
 
 ### High Level Architecture
 
-![image](https://github.com/andyweaves/databricks-privatelink-on-prem-dns-test/assets/43955924/571594ca-084a-424e-8d0e-f48c2e1829c8)
+![image](https://github.com/andyweaves/databricks-privatelink-on-prem-dns-test/assets/43955924/bf179ffe-40ff-4c35-a7c0-be6368ff39cd)
