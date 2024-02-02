@@ -1,5 +1,5 @@
 ### Overview
-- An example setup to replicate DNS forwarding from an on-prem Windows environment to an inbound resolver in AWS, with an architecture based on JD Braun's awesome [Isolake](https://github.com/JDBraun/isolake). A high level architecture diagram can be found in [here](img/PL-on-prem-DNS-test.jpeg) (note that a Databricks workspace, Unity Catalog, compute plane etc are all also created, in the diagram we're focussing on what's unique about this setup).
+- An example setup to replicate DNS forwarding from an on-prem Windows environment to an inbound resolver in AWS, with an architecture based on JD Braun's awesome [Isolake](https://github.com/JDBraun/isolake). A high level architecture diagram can be found below (note that a Databricks workspace, Unity Catalog, compute plane etc are all also created, in the diagram we're focussing on what's unique about this setup).
 
 -----------
 ### Disclaimer
@@ -21,3 +21,7 @@ This Terraform code is provided as a sample for reference and testing purposes o
 7. Run ``terrform init`` / ``terraform plan`` / ``terraform apply``
 
 Follow the setup steps in the Google Doc (please reach out to your Databricks team for a PDF copy)
+
+### High Level Architecture
+
+![image](https://github.com/andyweaves/databricks-privatelink-on-prem-dns-test/assets/43955924/571594ca-084a-424e-8d0e-f48c2e1829c8)
