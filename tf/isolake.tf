@@ -49,7 +49,7 @@ module "isolake" {
   transit_vpc_availability_zones = ["eu-central-1a", "eu-central-1b"]
 
   // Region-specific configurations for Databricks and AWS services - https://docs.databricks.com/en/resources/supported-regions.html#control-plane-nat-and-storage-bucket-addresses
-  control_plane_ip       = "18.159.44.32"                                          // IP for Databricks control plane
+  control_plane_ip       = "18.159.32.64"                                          // IP for Databricks control plane
   workspace_vpce_service = "com.amazonaws.vpce.eu-central-1.vpce-svc-081f78503812597f7" // VPCE service for workspace
   relay_vpce_service     = "com.amazonaws.vpce.eu-central-1.vpce-svc-08e5dfca9572c85c4" // VPCE service for relay
 
