@@ -1,5 +1,5 @@
 ### Overview
-- An example setup to replicate DNS forwarding from an on-prem Windows environment to an inbound resolver in AWS, with an architecture based on JD Braun's awesome [Isolake](https://github.com/JDBraun/isolake)
+- An example setup to replicate DNS forwarding from an on-prem Windows environment to an inbound resolver in AWS, with an architecture based on JD Braun's awesome [Isolake](https://github.com/JDBraun/isolake). A high level architecture diagram can be found in [here](img/PL-on-prem-DNS-test.jpeg) (note that a Databricks workspace, Unity Catalog, compute plane etc are all also created, in the diagram we're focussing on what's unique about this setup).
 
 -----------
 ### Disclaimer
