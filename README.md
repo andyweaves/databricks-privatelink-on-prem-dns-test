@@ -19,8 +19,7 @@ This Terraform code is provided as a sample for reference and testing purposes o
 5. Review the [tf/isolake.tf](tf/isolake.tf) file and updated as per your target environment
 6. Set up your AWS credentials
 7. Run ``terrform init`` / ``terraform plan`` / ``terraform apply``
-
-Follow the setup steps in the Google Doc (please reach out to your Databricks team for a PDF copy)
+8. Follow the setup steps in [pdf/windows-dns-server-setup.pdf](pdf/windows-dns-server-setup.pdf)
 
 ### High Level Architecture
 
