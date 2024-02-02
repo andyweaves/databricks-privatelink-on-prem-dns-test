@@ -1,0 +1,11 @@
+# Make a copy of this file, complete the entries for your environments and remove .example suffix
+
+aws_account_id=""
+client_id=""
+client_secret=""
+databricks_account_id=""
+region=""
+resource_owner=""
+resource_prefix=""
+ec2_keypair_name = ""
+rdp_public_ip = ""
