@@ -2,7 +2,7 @@ module "transit_vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.1"
 
-  name = "${var.resource_prefix}-workspace-transit-VPC"
+  name = "${var.resource_prefix}-transit-vpc"
   cidr = var.transit_vpc_cidr_range
   azs  = var.transit_vpc_availability_zones
   enable_dns_hostnames   = true

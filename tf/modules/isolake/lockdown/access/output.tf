@@ -23,10 +23,10 @@ output "windows_vm_instance_id" {
 
 output "linux_vm_public_ip" {
 
-  value = aws_instance.linux_vm_frontend.public_ip
+  value = aws_instance.linux_vm_dns.public_ip
 }
 
 output "linux_vm_instance_id" {
 
-  value = aws_instance.linux_vm_frontend.id
+  value = aws_instance.linux_vm_dns.id
 }

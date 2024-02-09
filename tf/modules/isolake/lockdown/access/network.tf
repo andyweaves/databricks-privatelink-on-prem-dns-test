@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.1"
 
-  name = "${var.resource_prefix}-workspace-frontend-vpc"
+  name = "${var.resource_prefix}-frontend-vpc"
   cidr = var.frontend_vpc_cidr_range
   azs  = var.frontend_availability_zones
   enable_dns_hostnames   = true
@@ -46,19 +46,19 @@ resource "aws_security_group" "frontend" {
     from_port        = 3389
     to_port          = 3389
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = [var.rdp_public_ip]
   }
   egress {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = [var.rdp_public_ip]
   }
   egress {
     from_port        = 443
     to_port          = 443
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = [var.rdp_public_ip]
   }
   ingress {
     from_port   = 3389

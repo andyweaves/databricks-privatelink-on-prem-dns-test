@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.1"
 
-  name = "${var.resource_prefix}-data-plane-VPC"
+  name = "${var.resource_prefix}-dataplane-vpc"
   cidr = var.vpc_cidr_range
   azs  = var.availability_zones
 
