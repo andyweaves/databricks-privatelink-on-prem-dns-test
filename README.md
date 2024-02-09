@@ -19,7 +19,7 @@ This Terraform code is provided as a sample for reference and testing purposes o
 5. Review the [tf/isolake.tf](tf/isolake.tf) file and updated as per your target environment
 6. Set up your AWS credentials
 7. Run ``terrform init`` / ``terraform plan`` / ``terraform apply``
-8. Follow the setup steps in [pdf/windows-dns-server-setup.pdf](pdf/windows-dns-server-setup.pdf)
+8. Follow the setup steps in [pdf/](the pdf/ directory) (NB - Bind DNS is the recommended approach. See the PDF files for more information)
 
 ### High Level Architecture
 
