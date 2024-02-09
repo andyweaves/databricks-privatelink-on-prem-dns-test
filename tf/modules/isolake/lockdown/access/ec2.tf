@@ -12,13 +12,10 @@ data "aws_ami" "windows" {
 
 data "aws_ami" "linux" {
      most_recent = true    
-     filter {
-        name   = "owner-alias"
-        values = ["amazon"]
-    }
+     owners      = ["amazon"]
     filter {
         name   = "name"
-        values = ["amzn2-ami-hvm*"]
+        values = ["al2023-ami-2023*"]
     }
 }
 
@@ -39,8 +36,8 @@ resource "aws_instance" "linux_vm_dns" {
     instance_type = "t2.medium"
     key_name = var.ec2_keypair_name
     vpc_security_group_ids = [aws_security_group.frontend.id]
-    associate_public_ip_address = false
-    subnet_id = module.vpc.private_subnets[0]
+    associate_public_ip_address = true
+    subnet_id = module.vpc.public_subnets[0]
     tags = {
         Name = "${var.resource_prefix}-${var.region}-linux-vm-dns"
     }

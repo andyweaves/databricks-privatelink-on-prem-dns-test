@@ -58,7 +58,7 @@ resource "aws_security_group" "frontend" {
     from_port        = 443
     to_port          = 443
     protocol         = "tcp"
-    cidr_blocks      = [var.rdp_public_ip]
+    cidr_blocks      = ["0.0.0.0/0"]
   }
   ingress {
     from_port   = 3389
