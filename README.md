@@ -23,4 +23,4 @@ This Terraform code is provided as a sample for reference and testing purposes o
 
 ### High Level Architecture
 
-![PL-on-prem-DNS-test](https://github.com/andyweaves/databricks-privatelink-on-prem-dns-test/assets/43955924/2718aaf4-d241-4f6b-a3ee-2752af4df052)
+![image](https://github.com/andyweaves/databricks-privatelink-on-prem-dns-test/assets/43955924/bd1b5c38-ffa3-4d74-87a7-ba48cf1d860a)
