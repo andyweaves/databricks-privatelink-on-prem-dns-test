@@ -37,7 +37,7 @@ resource "aws_instance" "linux_vm_dns" {
     key_name = var.ec2_keypair_name
     vpc_security_group_ids = [aws_security_group.frontend.id]
     associate_public_ip_address = true
-    subnet_id = module.vpc.public_subnets[0]
+    subnet_id = module.vpc.private_subnets[0]
     tags = {
         Name = "${var.resource_prefix}-${var.region}-linux-vm-dns"
     }
