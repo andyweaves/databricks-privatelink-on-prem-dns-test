@@ -19,8 +19,8 @@ module "isolake" {
 
   // AWS configuration and regional setup
   region           = var.region  // AWS region for resource deployment
-  full_region_name = "frankfurt" // Full name of the region for restrictive DBFS bucket policies
-  region_name      = "frankfurt"  // Short name of the region
+  full_region_name = "ireland" // Full name of the region for restrictive DBFS bucket policies
+  region_name      = "ireland"  // Short name of the region
 
   // Resource configuration for Isolake environment
   metastore_id         = null                           // Metastore ID - Leave NULL if no existing metastore
@@ -30,7 +30,7 @@ module "isolake" {
   data_access          = var.resource_owner             // Name of the user or entity that will be given read access to the data in UC
   vpc_cidr_range       = "10.0.0.0/23"                  // CIDR range for the VPC
   private_subnets_cidr = ["10.0.0.0/24", "10.0.1.0/24"] // CIDR blocks for private subnets
-  availability_zones   = ["eu-central-1a", "eu-central-1b"]   // Availability zones for resource deployment
+  availability_zones   = ["eu-west-1a", "eu-west-1b"]   // Availability zones for resource deployment
   sg_ingress_protocol  = ["tcp", "udp"]                 // Allowed protocols for within security group ingress
   sg_egress_protocol   = ["tcp", "udp"]                 // Allowed protocols for within security group egress
 
@@ -41,17 +41,17 @@ module "isolake" {
   frontend_vpc_cidr_range       = "10.0.0.0/26"   // CIDR range for VM
   frontend_private_subnets_cidr = ["10.0.0.0/28", "10.0.0.16/28"] // CIDR for VM private subnets
   frontend_public_subnets_cidr = ["10.0.0.32/28", "10.0.0.48/28"] // CIDR for VM private subnets
-  frontend_availability_zones   = ["eu-central-1a", "eu-central-1b"]  // Availability zone for VM
+  frontend_availability_zones   = ["eu-west-1a", "eu-west-1b"]  // Availability zone for VM
 
   // Transit VPC
   transit_vpc_cidr_range       = "172.18.0.0/22"
   transit_vpc_private_subnets_cidr = ["172.18.0.0/24", "172.18.1.0/24"]
-  transit_vpc_availability_zones = ["eu-central-1a", "eu-central-1b"]
+  transit_vpc_availability_zones = ["eu-west-1a", "eu-west-1b"]
 
   // Region-specific configurations for Databricks and AWS services - https://docs.databricks.com/en/resources/supported-regions.html#control-plane-nat-and-storage-bucket-addresses
-  control_plane_ip       = "18.159.32.64"                                          // IP for Databricks control plane
-  workspace_vpce_service = "com.amazonaws.vpce.eu-central-1.vpce-svc-081f78503812597f7" // VPCE service for workspace
-  relay_vpce_service     = "com.amazonaws.vpce.eu-central-1.vpce-svc-08e5dfca9572c85c4" // VPCE service for relay
+  control_plane_ip       = "46.137.47.49"                                          // IP for Databricks control plane
+  workspace_vpce_service = "com.amazonaws.vpce.eu-west-1.vpce-svc-0da6ebf1461278016" // VPCE service for workspace
+  relay_vpce_service     = "com.amazonaws.vpce.eu-west-1.vpce-svc-09b4eb2bc775f4e8c" // VPCE service for relay
 
   // Optional: Example cluster configuration with Derby Metastore
   enable_cluster_example = false // Flag to enable example cluster with Derby Metastore
